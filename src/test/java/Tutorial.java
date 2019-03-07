@@ -22,6 +22,9 @@ public class Tutorial {
         capabilities.setCapability("appActivity", "com.oneplus.calculator.Calculator");
         capabilities.setCapability("noReset", "true");
 
+
+
+
         //Instantiate Appium Driver
         try {
             driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
@@ -29,6 +32,7 @@ public class Tutorial {
             driver.findElement(By.id("op_add")).click();
             driver.findElement(By.id("digit_3")).click();
             driver.findElement(By.id("eq")).click();
+            System.out.println("Test completed");
 
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());
